@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <link rel="stylesheet" href="../src/index.css">
+</head>
+
+<body>
+    <div class="contaioner"></div>
+
+    <h1 class="text-3xl font-bold underline bg-red-600">
+        Hello world!
+    </h1>
+
+    <% htmlWebpackPlugin.options.cdn.script.forEach(function (item){ %>
+        <script src="<%= item %>"></script>
+        <% }) %>
+</body>
+
+</html>
